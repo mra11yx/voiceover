@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>iOS VO and Android tests (device and versions)</h1>
+    <div id="recognizeEvents" class="container">
+        <h2>Recognizing focus events on elements</h2>
+        <p>Try button, input field, div[tabindex="0"]</p>
+        <p>Focus on these elements will show what element has focus in window to right</p>
+        <div class="flexbox">
+            <div class="left">
+                <p><button>a button</button></p>
+                <p><input type="text" /></p>
+                <p tabindex="0">a p with tabindex = 0</p>
+                <p tabindex="-1">a p with tabindex = -1</p>
+            </div>
+            <div id="recognizeWindow" class="right"></div>
+        </div>
+    </div>
+    <div id="headingStrings" class="container">
+        <h2>Heading string change methods</h2>
+        <button class="stringChanger" data-changetype="innerText">Change using innerText</button>
+        <button class="stringChanger" data-changetype="innerHTML">Change using innerHTML</button>
+        <button class="stringChanger" data-changetype="textContent">Change using .textContent</button>
+        <button class="stringChanger" data-changetype="childNode">Change using child text node value replacement</button>
+        <h3 class="changeableHeading">Native heading</h3>
+        <div class="changeableHeading" role="heading" aria-level="3">ARIA heading (div)</div>
+    </div>
+    <div id="internalFocus" class="container">
+        <h2>Focusing on div from internal button</h2>
+        <button id="focusOnDiv">Focus on div</button>
+        <div id="focusableTargetDiv" tabindex="-1">I am a focusable div! Hey there!</div>
+    </div>
+    <div id="ariaHidden" class="container">
+        <h2>Aria-hidden changes being recognized</h2>
+        <div>
+            <button class="toggle">Toggle active and aria-hidden</button>
+            <div id="item01" class="card active" data-other="item02">item01</div>
+            <div id="item02" class="card" data-other="item01" aria-hidden="true">item02</div>
+        </div>
+        <div>
+            <button class="toggle">Toggle active and aria-hidden (with aria-hidden false)</button>
+            <div id="item03" class="card active" data-other="item04" data-hasfalse="true" aria-hidden="false">item03</div>
+            <div id="item04" class="card" data-other="item03" data-hasfalse="true" aria-hidden="true">item04</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

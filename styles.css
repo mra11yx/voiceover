@@ -1,0 +1,23 @@
+.container {
+    margin: 3ex;
+    border: 2px solid #333;
+    padding: 1ex 2em;
+  }
+  .flexbox {
+    display: flex;
+  }
+  .left, .right {
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .right {
+    border: 1px solid red;
+  }
+
+a:focus, button:focus, input:focus, textarea:focus, [tabindex]:focus {
+    outline: 2px solid #000;
+}
+
+.active {
+    background-color: #09f;
+}
